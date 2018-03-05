@@ -42,7 +42,7 @@ dotnet --info
 
 function publish() {
 	echo "publish $1"
-	dotnet publish $1 --output $2 --configuration Release --runtime linux-x64
+	dotnet publish src/$1 --output $2 --configuration Release --runtime linux-x64
 }
 
 if [ -e "$BUILD_DIR/Procfile" ]; then
